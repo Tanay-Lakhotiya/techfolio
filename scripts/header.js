@@ -27,7 +27,6 @@ document.querySelector('.js-menu-button')
     if (divLinksContainer.hasChildNodes()) {
       headerLinksHTML += '';
     } else {
-      divLinksContainer.classList.add('js-smooth-transition');
       headerLinksHTML += `
         <a>Projects</a>
         <a>Experience</a>
