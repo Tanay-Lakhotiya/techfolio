@@ -8,7 +8,7 @@ const headerHTML = `
     <a class="header-section-link experience-page-link" href="experience.html">Experience</a>
   </div>
   <div class="header-right-section">
-    <a class="header-section-link">Resume</a>
+    <a class="header-section-link js-resume-link">Resume</a>
     <a class="header-section-link js-about-link" href="about.html">About</a>
     <a class="header-section-link">Contact</a>
   </div>
@@ -34,7 +34,7 @@ document.querySelector('.js-menu-button')
       headerLinksHTML += `
         <a>Projects</a>
         <a>Experience</a>
-        <a>Resume</a>
+        <a class="header-section-link js-resume-link">Resume</a>
         <a class="header-section-link js-about-link" href="about.html">About</a>
         <a>Contact</a>
       `;
@@ -42,3 +42,11 @@ document.querySelector('.js-menu-button')
 
     divLinksContainer.innerHTML = headerLinksHTML;
   });
+
+document.querySelector('.js-resume-link').addEventListener('click', (event) => {
+  event.preventDefault();
+  const link = document.createElement('a');
+  link.href = 'Tanay_CV.pdf';
+  link.download = 'Tanay_CV.pdf';
+  link.click();
+});
