@@ -34,7 +34,7 @@ document.querySelector('.js-menu-button')
       headerLinksHTML += `
         <a>Projects</a>
         <a>Experience</a>
-        <a class="header-section-link js-resume-link">Resume</a>
+        <a class="header-section-link js-resume-link" href="Tanay_CV.pdf" download="Tanay_CV.pdf">Resume</a>
         <a class="header-section-link js-about-link" href="about.html">About</a>
         <a>Contact</a>
       `;
