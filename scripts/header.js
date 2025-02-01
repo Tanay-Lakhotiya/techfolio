@@ -23,25 +23,35 @@ if (document.title.includes('About')) {
   document.querySelector('.js-about-link').classList.add('underline-visible');
 }
 
-document.querySelector('.js-menu-button')
-  .addEventListener('click', () => {
-    const divLinksContainer = document.querySelector('.js-header-links');
+const menuButton = document.querySelector('.js-menu-button');
+const headerLinks = document.querySelector('.js-header-links');
+let isMenuOpen = false;
 
-    let headerLinksHTML = '';
-    if (divLinksContainer.hasChildNodes()) {
-      headerLinksHTML += '';
-    } else {
-      headerLinksHTML += `
-        <a>Projects</a>
-        <a>Experience</a>
-        <a class="header-section-link js-resume-link" href="Tanay_CV.pdf" download="Tanay_CV.pdf">Resume</a>
-        <a class="header-section-link js-about-link" href="about.html">About</a>
-        <a>Contact</a>
-      `;
-    }
+menuButton.addEventListener('click', () => {
+  isMenuOpen = !isMenuOpen;
+  if (isMenuOpen) {
+    headerLinks.innerHTML = `
+      <a href="project.html">Projects</a>
+      <a href="experience.html">Experience</a>
+      <a href="Tanay_CV.pdf" download>Resume</a>
+      <a href="about.html">About</a>
+      <a href="#contact">Contact</a>
+    `;
+  } else {
+    headerLinks.innerHTML = '';
+  }
+});
 
-    divLinksContainer.innerHTML = headerLinksHTML;
-  });
+// Close menu when clicking outside
+document.addEventListener('click', (event) => {
+  if (isMenuOpen && 
+      !headerLinks.contains(event.target) && 
+      !menuButton.contains(event.target)) {
+    headerLinks.classList.remove('active');
+    headerLinks.innerHTML = '';
+    isMenuOpen = false;
+  }
+});
 
 document.querySelector('.js-resume-link').addEventListener('click', (event) => {
   event.preventDefault();
