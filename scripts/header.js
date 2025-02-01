@@ -9,7 +9,7 @@ const headerHTML = `
   </div>
   <div class="header-right-section">
     <a class="header-section-link">Resume</a>
-    <a class="header-section-link">About</a>
+    <a class="header-section-link js-about-link" href="about.html">About</a>
     <a class="header-section-link">Contact</a>
   </div>
   <button class="header-menu-button js-menu-button">
@@ -18,6 +18,10 @@ const headerHTML = `
 `;
 
 document.querySelector('.js-header').innerHTML = headerHTML;
+
+if (document.title.includes('About')) {
+  document.querySelector('.js-about-link').classList.add('underline-visible');
+}
 
 document.querySelector('.js-menu-button')
   .addEventListener('click', () => {
@@ -31,7 +35,7 @@ document.querySelector('.js-menu-button')
         <a>Projects</a>
         <a>Experience</a>
         <a>Resume</a>
-        <a>About</a>
+        <a class="header-section-link js-about-link" href="about.html">About</a>
         <a>Contact</a>
       `;
     }
