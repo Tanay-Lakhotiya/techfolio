@@ -13,20 +13,20 @@ projectList.forEach((project) => {
         <div class="project-stats-container">
           <div>
             <div class="project-attribute">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-layers js-${project.id}-tech-stack-svg" viewBox="-1 -1 18 18">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-layers js-${project.id}-tech-stack-svg tech-stack-svg" viewBox="-1 -1 18 18">
                 <path d="M8.211.5a.5.5 0 0 0-.422 0L.789 4.053a.5.5 0 0 0 0 .894l6.999 3.553a.5.5 0 0 0 .422 0l6.999-3.553a.5.5 0 0 0 0-.894L8.211.5zM1.731 4.5L8 1.057 14.268 4.5 8 7.943 1.731 4.5z"></path>
                 <path d="M.789 7.447a.5.5 0 0 1 .658-.223L8 10.943l6.553-3.719a.5.5 0 1 1 .434.89l-6.999 3.553a.5.5 0 0 1-.422 0L.789 8.114a.5.5 0 0 1-.223-.658z"></path>
                 <path d="M.789 10.447a.5.5 0 0 1 .658-.223L8 13.943l6.553-3.719a.5.5 0 1 1 .434.89l-6.999 3.553a.5.5 0 0 1-.422 0L.789 11.114a.5.5 0 0 1-.223-.658z"></path>
               </svg>
-              <p class="js-${project.id}-tech-stack-text">${project.techStack}</p>
+              <p class="js-${project.id}-tech-stack-text attribute-text">${project.techStack}</p>
             </div>
             <div class="project-attribute">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check js-${project.id}-features-svg" viewBox="-1 -1 18 18"><path fill-rule="evenodd" d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"></path><path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"></path><path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"></path></svg>
-              <div class="js-${project.id}-features-text">${project.features} Features</div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check js-${project.id}-features-svg features-svg" viewBox="-1 -1 18 18"><path fill-rule="evenodd" d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"></path><path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"></path><path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"></path></svg>
+              <p class="js-${project.id}-features-text attribute-text">${project.features} Features</p>
             </div>
             <div class="project-attribute">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock js-${project.id}-time-svg" viewBox="-1 -1 18 18"><path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"></path><path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"></path></svg>
-              <p class="js-${project.id}-time-text">${project.timePeriod}</p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock js-${project.id}-time-svg time-svg" viewBox="-1 -1 18 18"><path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"></path><path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"></path></svg>
+              <p class="js-${project.id}-time-text attribute-text">${project.timePeriod}</p>
             </div>
           </div>
           <div class="project-buttons-container js-project-button-container">
