@@ -10,7 +10,7 @@ const headerHTML = `
   <div class="header-right-section">
     <a class="header-section-link js-resume-link">Resume</a>
     <a class="header-section-link js-about-link" href="about.html">About</a>
-    <a class="header-section-link">Contact</a>
+    <a class="header-section-link" href="contact.html">Contact</a>
   </div>
   <button class="header-menu-button js-menu-button">
     <svg class="menu" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true" style="pointer-events: none; display: inherit; width: 100%; height: 100%;"><path d="M21 6H3V5h18v1zm0 5H3v1h18v-1zm0 6H3v1h18v-1z"></path></svg>
@@ -35,7 +35,7 @@ menuButton.addEventListener('click', () => {
       <a href="experience.html">Experience</a>
       <a href="Tanay_CV.pdf" download>Resume</a>
       <a href="about.html">About</a>
-      <a href="#contact">Contact</a>
+      <a href="contact.html">Contact</a>
     `;
   } else {
     headerLinks.innerHTML = '';
