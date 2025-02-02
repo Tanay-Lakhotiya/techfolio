@@ -1,4 +1,4 @@
-import { projectList } from "/data.js/projectList.js";
+import { projectList } from "../data/projectList.js";
 
 let projectsHTML = '';
 projectList.forEach((project) => {
