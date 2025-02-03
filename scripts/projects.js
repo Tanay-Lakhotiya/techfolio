@@ -30,8 +30,8 @@ projectList.forEach((project) => {
             </div>
           </div>
           <div class="project-buttons-container js-project-button-container">
-            <button class="view-project-button js-${project.id}-view-project">Project</button>
-            <button class="view-code-button js-${project.id}-view-code">Code</button>
+            <button class="view-project-button js-${project.id}-view-project js-view-project-button" data-project-id="${project.id}">Project</button>
+            <button class="view-code-button js-${project.id}-view-code js-view-code-button" data-project-id="${project.id}">Code</button>
           </div>
         </div>
       </div>
@@ -41,36 +41,82 @@ projectList.forEach((project) => {
 
 document.querySelector('.js-project-container').innerHTML = projectsHTML;
 
-document.querySelectorAll('.js-project-info-container')
-  .forEach((project) => {
-    const projectId = project.dataset.projectId;
+function handleScreenSizeChange() {
+  if (window.matchMedia("(max-width: 480px)").matches)
+      makeProjectButtonsInteractive();
+  else if (window.matchMedia("(max-width: 768px)").matches)
+      makeProjectButtonsInteractive();
+  else if (window.matchMedia("(max-width: 1024px)").matches)
+      makeProjectButtonsInteractive();
+  else {
+      document.querySelectorAll('.js-project-info-container')
+      .forEach((project) => {
+        const projectId = project.dataset.projectId;
 
-    project.addEventListener('mouseenter', () => {
-      const techStackSVG = document.querySelector(`.js-${projectId}-tech-stack-svg`);
-      techStackSVG.style.color = 'rgb(25, 135, 84)';
+        project.addEventListener('mouseenter', () => {
+          const techStackSVG = document.querySelector(`.js-${projectId}-tech-stack-svg`);
+          techStackSVG.style.color = 'rgb(25, 135, 84)';
 
-      const techStackText = document.querySelector(`.js-${projectId}-tech-stack-text`);
-      techStackText.style.color = 'Black';
+          const techStackText = document.querySelector(`.js-${projectId}-tech-stack-text`);
+          techStackText.style.color = 'Black';
 
-      const featuresSVG = document.querySelector(`.js-${projectId}-features-svg`);
-      featuresSVG.style.color = 'Red';
+          const featuresSVG = document.querySelector(`.js-${projectId}-features-svg`);
+          featuresSVG.style.color = 'Red';
 
-      const featuresText = document.querySelector(`.js-${projectId}-features-text`);
-      featuresText.style.color = 'Black';
+          const featuresText = document.querySelector(`.js-${projectId}-features-text`);
+          featuresText.style.color = 'Black';
 
-      const timeSVG = document.querySelector(`.js-${projectId}-time-svg`);
-      timeSVG.style.color = 'darkblue';
+          const timeSVG = document.querySelector(`.js-${projectId}-time-svg`);
+          timeSVG.style.color = 'darkblue';
 
-      const timeText = document.querySelector(`.js-${projectId}-time-text`);
-      timeText.style.color = 'Black';
+          const timeText = document.querySelector(`.js-${projectId}-time-text`);
+          timeText.style.color = 'Black';
 
-      const viewProjectButton = document.querySelector(`.js-${projectId}-view-project`);
-      viewProjectButton.classList.add('view-project-buttons-visible');
+          const viewProjectButton = document.querySelector(`.js-${projectId}-view-project`);
+          viewProjectButton.classList.add('view-project-buttons-visible');
 
-      const viewCodeButton = document.querySelector(`.js-${projectId}-view-code`);
-      viewCodeButton.classList.add('view-project-buttons-visible');
+          const viewCodeButton = document.querySelector(`.js-${projectId}-view-code`);
+          viewCodeButton.classList.add('view-project-buttons-visible');
 
+          makeProjectButtonsInteractive();
+        })
+
+        project.addEventListener('mouseleave', () => {
+          const techStackSVG = document.querySelector(`.js-${projectId}-tech-stack-svg`);
+          techStackSVG.style.color = 'rgb(173, 181, 189)';
+
+          const techStackText = document.querySelector(`.js-${projectId}-tech-stack-text`);
+          techStackText.style.color = 'rgb(173, 181, 189)';
+
+          const featuresSVG = document.querySelector(`.js-${projectId}-features-svg`);
+          featuresSVG.style.color = 'rgb(173, 181, 189)';
+
+          const featuresText = document.querySelector(`.js-${projectId}-features-text`);
+          featuresText.style.color = 'rgb(173, 181, 189)';
+
+          const timeSVG = document.querySelector(`.js-${projectId}-time-svg`);
+          timeSVG.style.color = 'rgb(173, 181, 189)';
+
+          const timeText = document.querySelector(`.js-${projectId}-time-text`);
+          timeText.style.color = 'rgb(173, 181, 189)';
+
+          document.querySelector(`.js-${projectId}-view-project`).classList.remove('view-project-buttons-visible');
+
+          document.querySelector(`.js-${projectId}-view-code`).classList.remove('view-project-buttons-visible');
+        });
+      });
+  }
+}
+
+handleScreenSizeChange();
+
+window.addEventListener("resize", handleScreenSizeChange);
+
+function makeProjectButtonsInteractive() {
+  document.querySelectorAll('.js-view-project-button')
+    .forEach((viewProjectButton) => {
       viewProjectButton.addEventListener('click', () => {
+        const projectId = viewProjectButton.dataset.projectId;
         if (projectId === 'youtube-clone') {
           window.location.href='https://tanay-lakhotiya.github.io/Youtube/';
         } else if (projectId === 'calculator-app') {
@@ -81,41 +127,21 @@ document.querySelectorAll('.js-project-info-container')
           window.location.href='https://tanay-lakhotiya.github.io/todo-list-app/';
         }
       });
-
-      viewCodeButton.addEventListener('click', () => {
-        if (projectId === 'youtube-clone') {
-          window.location.href = 'https://github.com/Tanay-Lakhotiya/Youtube';
-        } else if (projectId === 'calculator-app') {
-          window.location.href = 'https://github.com/Tanay-Lakhotiya/calculator-app';
-        } else if (projectId === 'rock-paper-scissors-app') {
-          window.location.href = 'https://github.com/Tanay-Lakhotiya/rock-paper-scissors';
-        } else if (projectId === 'todo-list-app') {
-          window.location.href = 'https://github.com/Tanay-Lakhotiya/todo-list-app';
-        }
-      });
-    })
-
-    project.addEventListener('mouseleave', () => {
-      const techStackSVG = document.querySelector(`.js-${projectId}-tech-stack-svg`);
-      techStackSVG.style.color = 'rgb(173, 181, 189)';
-
-      const techStackText = document.querySelector(`.js-${projectId}-tech-stack-text`);
-      techStackText.style.color = 'rgb(173, 181, 189)';
-
-      const featuresSVG = document.querySelector(`.js-${projectId}-features-svg`);
-      featuresSVG.style.color = 'rgb(173, 181, 189)';
-
-      const featuresText = document.querySelector(`.js-${projectId}-features-text`);
-      featuresText.style.color = 'rgb(173, 181, 189)';
-
-      const timeSVG = document.querySelector(`.js-${projectId}-time-svg`);
-      timeSVG.style.color = 'rgb(173, 181, 189)';
-
-      const timeText = document.querySelector(`.js-${projectId}-time-text`);
-      timeText.style.color = 'rgb(173, 181, 189)';
-
-      document.querySelector(`.js-${projectId}-view-project`).classList.remove('view-project-buttons-visible');
-
-      document.querySelector(`.js-${projectId}-view-code`).classList.remove('view-project-buttons-visible');
     });
-  });
+
+    document.querySelectorAll('.js-view-code-button')
+      .forEach((viewCodeButton) => {
+        viewCodeButton.addEventListener('click', () => {
+          const projectId = viewCodeButton.dataset.projectId;
+          if (projectId === 'youtube-clone') {
+            window.location.href = 'https://github.com/Tanay-Lakhotiya/Youtube';
+          } else if (projectId === 'calculator-app') {
+            window.location.href = 'https://github.com/Tanay-Lakhotiya/calculator-app';
+          } else if (projectId === 'rock-paper-scissors-app') {
+            window.location.href = 'https://github.com/Tanay-Lakhotiya/rock-paper-scissors';
+          } else if (projectId === 'todo-list-app') {
+            window.location.href = 'https://github.com/Tanay-Lakhotiya/todo-list-app';
+          }
+        });
+      });
+}
