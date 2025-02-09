@@ -79,7 +79,7 @@
 
 @media (max-width: 480px) {
   .main-section {
-    padding: 20px 20px 30px;
+    padding: 80px 20px 30px;
   }
 
   .main-heading {
@@ -97,7 +97,8 @@
   }
 
   .get-started-button {
-    width: 100%;
-    padding: 16px 24px;
+    padding: 10px 22px;
+    font-size: 14px;
+    max-width: 300px;
   }
 }

@@ -13,7 +13,7 @@ export const bajajExperienceList = [
   },
   {
     designation: 'Software Engineer',
-    designationDuration: 'Oct 2023 - Dec 2024 &middot; 1 yr 3 mons',
+    designationDuration: 'Oct 2022 - Oct 2023 &middot; 1 yr 1 mo',
     workSummary: [
       'Developed Java backend service using SOAP API for Insta-eIA, reducing manual activation by 80% and generating 1.55 lakh eIAs annually.',
       'Built cKYC API wrapper, optimizing PASA calculator journey by limiting API consumption and cutting costs.',
