@@ -81,3 +81,145 @@
   flex-direction: column;
   row-gap: 20px;
 }
+
+@media (max-width: 1024px) {
+  .experience-section {
+    padding: 40px 60px 40px;
+  }
+
+  .experience-heading {
+    font-size: 36px;
+  }
+
+  .company-section {
+    padding: 25px;
+    column-gap: 20px;
+  }
+
+  .bajaj-compnay-logo-container {
+    margin-top: -20px;
+  }
+
+  .company-picture {
+    width: 90px;
+    height: auto;
+  }
+
+  .company-name {
+    font-size: 22px;
+  }
+
+  .work-points {
+    row-gap: 8px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .experience-section {
+    padding: 40px 30px 30px;
+  }
+
+  .experience-heading {
+    font-size: 32px;
+    margin-bottom: 24px;
+  }
+
+  .company-section {
+    padding: 20px;
+    column-gap: 16px;
+    margin-bottom: 30px;
+  }
+
+  .company-picture {
+    width: 80px;
+  }
+
+  .company-name {
+    font-size: 20px;
+  }
+
+  .designation {
+    font-size: 16px;
+  }
+
+  .duration,
+  .location,
+  .bajaj-position-duration {
+    font-size: 13px;
+  }
+
+  .work-points {
+    margin-left: 15px;
+    row-gap: 8px;
+    font-size: 14px;
+  }
+
+  .bajaj-compnay-logo-container {
+    margin-top: -20px;
+  }
+
+  .bajaj-experience-info {
+    row-gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-section {
+    padding: 10px 20px 20px;
+  }
+
+  .experience-heading {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .company-section {
+    flex-direction: column;
+    padding: 16px;
+    margin-bottom: 34px;
+  }
+
+  .intellect-compnay-logo-container,
+  .bajaj-compnay-logo-container {
+    align-self: center;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .bajaj-compnay-logo-container {
+    margin-top: -15px;
+    margin-bottom: -15px;
+  }
+
+  .company-picture {
+    width: 70px;
+    height: auto;
+  }
+
+  .company-name {
+    font-size: 18px;
+  }
+
+  .designation {
+    font-size: 16px;
+  }
+
+  .duration,
+  .location,
+  .company-name,
+  .designation,
+  .bajaj-position-duration {
+    text-align: center;
+  }
+
+  .work-points {
+    margin-left: 16px;
+    row-gap: 10px;
+    font-size: 14px;
+  }
+
+  .bajaj-experience-info {
+    row-gap: 20px;
+  }
+}
