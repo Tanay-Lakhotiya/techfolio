@@ -5,7 +5,7 @@ const headerHTML = `
       tanaylakhotiya.dev
     </a>
     <a class="header-section-link projects-page-link js-projects-link" href="projects.html">Projects</a>
-    <a class="header-section-link experience-page-link" href="experience.html">Experience</a>
+    <a class="header-section-link experience-page-link js-experience-link" href="experience.html">Experience</a>
   </div>
   <div class="header-right-section">
     <a class="header-section-link js-resume-link">Resume</a>
@@ -25,7 +25,9 @@ if (document.title.includes('Projects')) {
   document.querySelector('.js-about-link').classList.add('underline-visible');
 } else if (document.title.includes('Contact')) {
   document.querySelector('.js-contact-link').classList.add('underline-visible');
-}
+} else if (document.title.includes('Experience')) {
+  document.querySelector('.js-experience-link').classList.add('underline-visible');
+} 
 
 const menuButton = document.querySelector('.js-menu-button');
 const headerLinks = document.querySelector('.js-header-links');
