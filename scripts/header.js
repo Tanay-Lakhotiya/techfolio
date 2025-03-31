@@ -62,7 +62,7 @@ document.addEventListener('click', (event) => {
 document.querySelector('.js-resume-link').addEventListener('click', (event) => {
   event.preventDefault();
   const link = document.createElement('a');
-  link.href = 'Tanay_CV.pdf';
-  link.download = 'Tanay_CV.pdf';
+  link.href = 'Tanay_Lakhotiya_Resume.pdf';
+  link.download = 'Tanay_Lakhotiya_Resume.pdf';
   link.click();
 });
