@@ -125,6 +125,8 @@ function makeProjectButtonsInteractive() {
           window.location.href='https://tanay-lakhotiya.github.io/rock-paper-scissors/';
         } else if (projectId === 'todo-list-app') {
           window.location.href='https://tanay-lakhotiya.github.io/todo-list-app/';
+        } else if (projectId === 'amazon-ecommerce') {
+          window.location.href='https://tanay-lakhotiya.github.io/amazon-project/';
         }
       });
     });
@@ -141,6 +143,8 @@ function makeProjectButtonsInteractive() {
             window.location.href = 'https://github.com/Tanay-Lakhotiya/rock-paper-scissors';
           } else if (projectId === 'todo-list-app') {
             window.location.href = 'https://github.com/Tanay-Lakhotiya/todo-list-app';
+          } else if (projectId === 'amazon-ecommerce') {
+            window.location.href = 'https://github.com/Tanay-Lakhotiya/amazon-project';
           }
         });
       });
