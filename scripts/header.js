@@ -39,7 +39,7 @@ menuButton.addEventListener('click', () => {
     headerLinks.innerHTML = `
       <a href="projects.html">Projects</a>
       <a href="experience.html">Experience</a>
-      <a href="Tanay_CV.pdf" download>Resume</a>
+      <a href="Tanay_Lakhotiya_Resume.pdf" download>Resume</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     `;
