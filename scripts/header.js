@@ -39,7 +39,7 @@ menuButton.addEventListener('click', () => {
     headerLinks.innerHTML = `
       <a href="projects.html">Projects</a>
       <a href="experience.html">Experience</a>
-      <a href="Tanay_Lakhotiya_Resume.pdf" download>Resume</a>
+      <a href="Tanay_Lakhotiya_CV.pdf" download>Resume</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     `;
@@ -62,7 +62,7 @@ document.addEventListener('click', (event) => {
 document.querySelector('.js-resume-link').addEventListener('click', (event) => {
   event.preventDefault();
   const link = document.createElement('a');
-  link.href = 'Tanay_Lakhotiya_Resume.pdf';
-  link.download = 'Tanay_Lakhotiya_Resume.pdf';
+  link.href = 'Tanay_Lakhotiya_CV.pdf';
+  link.download = 'Tanay_Lakhotiya_CV.pdf';
   link.click();
 });
