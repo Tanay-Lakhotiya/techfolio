@@ -53,8 +53,8 @@ export const projectList = [
     id: 'amazon-ecommerce',
     thumbnail: 'images/projects/amazon-thumbnail.jpg',
     title: 'Amazon E-Commerce',
-    description: 'Full-featured e-commerce application with JavaScript displaying 40+ products, implementing OOP principles through both class-based and factory function patterns with persistent state management via localStorage. Implemented asynchronous JavaScript patterns including Promise chaining, async/await, and Promise.all for concurrent API requests, while ensuring application stability through error handling.',
-    techStack: 'HTML5, CSS3, JavaScript(ES6+), Git and Github Pages',
+    description: 'Developed a full-stack JavaScript e-commerce application using ES6+, OOP, and MVC architecture, integrating RESTful APIs (Fetch, XHR) and LocalStorage for state management across 40+ dynamic products. Implemented Promises, async/await, and advanced error handling for stable asynchronous workflows, and ensured maintainability through unit testing with Jasmine 5.1.1 and version control via Git/GitHub.',
+    techStack: 'HTML5, CSS3, JavaScript(ES6+), Jasmine 5.1.1, Git and Github Pages',
     features: '15',
     timePeriod: '30 Days+'
     /*
